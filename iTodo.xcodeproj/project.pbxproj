@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C24D495191FE5CA0091C044 /* TodoDetailUIViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24D494191FE5CA0091C044 /* TodoDetailUIViewViewController.m */; };
+		8C24D498191FE8960091C044 /* iTodoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24D497191FE8960091C044 /* iTodoTableViewController.m */; };
+		8C24D49B191FE9CC0091C044 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24D49A191FE9CC0091C044 /* Task.m */; };
 		8C4AD4BD190E8D1D00F0DC7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4AD4BC190E8D1D00F0DC7D /* Foundation.framework */; };
 		8C4AD4BF190E8D1D00F0DC7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4AD4BE190E8D1D00F0DC7D /* CoreGraphics.framework */; };
 		8C4AD4C1190E8D1D00F0DC7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4AD4C0190E8D1D00F0DC7D /* UIKit.framework */; };
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C24D493191FE5CA0091C044 /* TodoDetailUIViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailUIViewViewController.h; sourceTree = "<group>"; };
+		8C24D494191FE5CA0091C044 /* TodoDetailUIViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailUIViewViewController.m; sourceTree = "<group>"; };
+		8C24D496191FE8960091C044 /* iTodoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTodoTableViewController.h; sourceTree = "<group>"; };
+		8C24D497191FE8960091C044 /* iTodoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTodoTableViewController.m; sourceTree = "<group>"; };
+		8C24D499191FE9CC0091C044 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		8C24D49A191FE9CC0091C044 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		8C4AD4B9190E8D1D00F0DC7D /* iTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4AD4BC190E8D1D00F0DC7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8C4AD4BE190E8D1D00F0DC7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +88,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C24D49C191FE9D90091C044 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C24D493191FE5CA0091C044 /* TodoDetailUIViewViewController.h */,
+				8C24D494191FE5CA0091C044 /* TodoDetailUIViewViewController.m */,
+				8C24D496191FE8960091C044 /* iTodoTableViewController.h */,
+				8C24D497191FE8960091C044 /* iTodoTableViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8C24D49D191FE9E30091C044 /* stuff */ = {
+			isa = PBXGroup;
+			children = (
+				8C24D499191FE9CC0091C044 /* Task.h */,
+				8C24D49A191FE9CC0091C044 /* Task.m */,
+			);
+			name = stuff;
+			sourceTree = "<group>";
+		};
 		8C4AD4B0190E8D1D00F0DC7D = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +141,8 @@
 		8C4AD4C2190E8D1D00F0DC7D /* iTodo */ = {
 			isa = PBXGroup;
 			children = (
+				8C24D49D191FE9E30091C044 /* stuff */,
+				8C24D49C191FE9D90091C044 /* Views */,
 				8C4AD4CB190E8D1D00F0DC7D /* ITHSAppDelegate.h */,
 				8C4AD4CC190E8D1D00F0DC7D /* ITHSAppDelegate.m */,
 				8C4AD4CE190E8D1D00F0DC7D /* Main.storyboard */,
@@ -250,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C24D495191FE5CA0091C044 /* TodoDetailUIViewViewController.m in Sources */,
 				8C4AD4CD190E8D1D00F0DC7D /* ITHSAppDelegate.m in Sources */,
 				8C4AD4D3190E8D1D00F0DC7D /* ITHSViewController.m in Sources */,
+				8C24D498191FE8960091C044 /* iTodoTableViewController.m in Sources */,
+				8C24D49B191FE9CC0091C044 /* Task.m in Sources */,
 				8C4AD4C9190E8D1D00F0DC7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +491,7 @@
 				8C4AD4ED190E8D1D00F0DC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C4AD4EE190E8D1D00F0DC7D /* Build configuration list for PBXNativeTarget "iTodoTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +500,7 @@
 				8C4AD4F0190E8D1D00F0DC7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
