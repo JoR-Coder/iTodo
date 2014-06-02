@@ -8,7 +8,10 @@
 
 #import "TodoDetailUIViewViewController.h"
 
+
 @interface TodoDetailUIViewViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextView *textTextView;
 
 @end
 
@@ -29,10 +32,18 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)saveButtonClicked:(id)sender {
+	NSString *title = self.titleTextField.text;
+	NSString *text  = self.textTextView.text;
+	
+	[self.taskList addObject:[[Task alloc] initWithTitle:title andDescription:text]];
+	[self goBack:self.navigationItem.self];
+}
+
+- (IBAction)goBack:(id)sender {
+	[self.view endEditing:YES];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

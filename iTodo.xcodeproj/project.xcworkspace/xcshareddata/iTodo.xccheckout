@@ -5,13 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>77087E09-A73B-490B-9D53-92E68F346B83</string>
+	<string>FC527AE4-B2DB-4502-A1F3-6D87D17CF4F9</string>
 	<key>IDESourceControlProjectName</key>
 	<string>iTodo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>25FDE241-7ABF-4611-BEBF-81987C69B1B9</key>
-		<string>https://github.com/JoR-Coder/iTodo.git</string>
 		<key>73F2E5BA-0AD7-4A3C-82DC-B1A761FEE6CC</key>
 		<string>https://github.com/JoR-Coder/iTodo.git</string>
 	</dict>
@@ -19,8 +17,6 @@
 	<string>iTodo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>25FDE241-7ABF-4611-BEBF-81987C69B1B9</key>
-		<string>../../iTodo</string>
 		<key>73F2E5BA-0AD7-4A3C-82DC-B1A761FEE6CC</key>
 		<string>../..</string>
 	</dict>
@@ -37,14 +33,6 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>73F2E5BA-0AD7-4A3C-82DC-B1A761FEE6CC</string>
-			<key>IDESourceControlWCCName</key>
-			<string>iTodo</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>25FDE241-7ABF-4611-BEBF-81987C69B1B9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iTodo</string>
 		</dict>

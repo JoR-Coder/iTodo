@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Task.h"
 
 @interface TodoDetailUIViewViewController : UIViewController
+@property (nonatomic) NSMutableArray *taskList;
 
 @end

@@ -10,12 +10,12 @@
 
 @implementation Task
 
--(instancetype) initWithTitle:(NSString *)title andDescription:(NSString *)description{
+-(instancetype) initWithTitle:(NSString *)title andDescription:(NSString *)todoText{
 	self = [ super init];
 	
 	if (self ) {
-		self.title = title;
-		self.description = description;
+		self.Title = title;
+		self.TodoText = todoText;
 	}
 	
 	return self;

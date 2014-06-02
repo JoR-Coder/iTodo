@@ -7,9 +7,15 @@
 //
 
 #import "iTodoTableViewController.h"
+#import "TodoDetailUIViewViewController.h"
 #import "Task.h"
 
+#define TITLE_TAG  10000
+#define TEXT_TAG   20000
+#define SWITCH_TAG 30000
+
 @interface iTodoTableViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *TodoTableView;
 
 @property (nonatomic) NSMutableArray *taskList;
 
@@ -73,13 +79,31 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"taskCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-	
+
 	Task *t = [self.taskList objectAtIndex:indexPath.row];
-	cell.textLabel.text = [NSString stringWithFormat:@"%2d: %@", indexPath.row+1, t.title ];
+	
+	UILabel    *titleLabel   = (UILabel *)    [cell viewWithTag:TITLE_TAG ];
+	UITextView *textTextView = (UITextView *) [cell viewWithTag:TEXT_TAG ];
+	UISwitch   *switchOff    = (UISwitch *)   [cell viewWithTag:SWITCH_TAG ];
+	
+	switchOff.tag = indexPath.row+1;
+	[switchOff setOn:YES];
+	[switchOff addTarget:self action:@selector(taskDone:) forControlEvents:UIControlEventTouchUpInside];
+	
+	
+	titleLabel.text   = [NSString stringWithFormat:@"%@", t.Title ];
+	textTextView.text = [NSString stringWithFormat:@"%@", t.TodoText ];
 
     return cell;
+}
+
+-(void)taskDone:(UISwitch *)switchOff{
+	
+	if ( !switchOff.on ) {
+		[self.taskList removeObjectAtIndex:switchOff.tag-1];
+		[ self.tableView reloadData ];
+	}
+	
 }
 
 
@@ -121,15 +145,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	if ( [segue.identifier isEqualToString:@"toEditSegue"] ) {
+		
+		TodoDetailUIViewViewController *editView = [segue destinationViewController];
+		editView.taskList = self.taskList;
+
+	}
 }
-*/
+
 
 @end

@@ -10,9 +10,9 @@
 
 @interface Task : NSObject
 
-@property (nonatomic) NSString *title;
-@property (nonatomic) NSString *description;
+@property (nonatomic) NSString *Title;
+@property (nonatomic) NSString *TodoText;
 
--(instancetype) initWithTitle:(NSString *) title andDescription:(NSString *)description;
+-(instancetype) initWithTitle:(NSString *) title andDescription:(NSString *)todoText;
 
 @end
